@@ -2,16 +2,35 @@
 
 I use this repo to learn the [ROS2 framework](https://docs.ros.org/en/rolling/index.html).
 
-## Build instructions and run
+## Build and run
+
+### Nix
 I used the nix package manager to setup Ros2 via the magnificant project
 [nix-ros-overlay](https://github.com/lopsided98/nix-ros-overlay).
-If you are also using nix, you should be able bulid and run the turtlebot4
-simulation with nothing but the commands:
+If you are also using nix, you should be able bulid the project on any machine
+by running just the commands:
+
 ```bash
+cd ~
+git clone --recurse-submodules git@github.com:QHeiler/ros2_playground.git
 source rosinit.sh
 colcon build
+```
+
+In order to run the simulation afterwards, **open up a new shell** and within
+that, run:
+```bash
 ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py
 ```
+
+### Non-nix
+If you don't use nix, but already have ROS2 configured on your system,
+you can just run:
+```bash
+git clone --recurse-submodules git@github.com:QHeiler/ros2_playground.git
+```
+to checkout the Repo and then use **rosdep** and **colcon** in the usual
+way to build the project.
 
 ### Firewall rules!
 The gazebo plugin relies on UDP-multicast messages. If your firewall configuration
