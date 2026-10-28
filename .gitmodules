@@ -1,0 +1,12 @@
+[submodule "src/create3_sim"]
+	path = src/create3_sim
+	url = git@github.com:QHeiler/create3_sim.git
+[submodule "src/turtlebot4"]
+	path = src/turtlebot4
+	url = git@github.com:QHeiler/turtlebot4.git
+[submodule "src/turtlebot4_simulator"]
+	path = src/turtlebot4_simulator
+	url = git@github.com:QHeiler/turtlebot4_simulator.git
+[submodule "src/irobot_create_msgs"]
+	path = src/irobot_create_msgs
+	url = git@github.com:QHeiler/irobot_create_msgs.git
