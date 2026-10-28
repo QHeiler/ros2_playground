@@ -2,6 +2,14 @@
 
 I use this repo to learn the [ROS2 framework](https://docs.ros.org/en/rolling/index.html).
 
+## Square Dock action for TurtleBot 4
+By default [TurtleBot 4](https://turtlebot.github.io/turtlebot4-user-manual/software/turtlebot4_simulator.html)
+provides two "docking behaviours": Dock and Undock. I added the 
+additional behaviour "Square Dock" to the TurtleBot4 simulation,
+that let's the robot drive on a square line around the docking 
+station. This function is advertised via an action server and 
+accessible from within the gazebo plugin.
+
 ## Build and run
 
 ### Nix
@@ -38,13 +46,6 @@ blocks multicast messages, this problem be can quite painful to troubleshoot.
 The ROS2 documentation mentions this [only briefly](https://docs.ros.org/en/foxy/How-To-Guides/Installation-Troubleshooting.html#enable-multicast).
 Especially on NixOS, mutlicast seems to be blocked by default.
 The firewalls rules in NixOS can be adjusted using [iptables](https://man7.org/linux/man-pages/man8/iptables.8.html).
-
-## Square Dock action for turtlebot4
-By default turtlebot4 provides two "docking behaviours": Dock and Undock.
-I added a third functionality "Square Dock" to the turtlebot4 simulation.
-That let's the robot drive on a square line around the docking station.
-This function is advertised via an action server and available in the
-via the gazebo plugin.
 
 ### How to use
 
